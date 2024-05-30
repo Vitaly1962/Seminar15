@@ -1,0 +1,23 @@
+import random
+import pandas as pd
+
+# Создание DataFrame
+lst = ['robot'] * 10
+lst += ['human'] * 10
+random.shuffle(lst)
+data = pd.DataFrame({'whoAmI': lst})
+print("Original DataFrame:")
+print(data.head())
+
+# Преобразование в one hot encoding
+one_hot = pd.DataFrame()
+
+# Проход по уникальным значениям и создание столбцов
+for category in data['whoAmI'].unique():
+    one_hot[category] = data['whoAmI'].apply(lambda x: 1 if x == category else 0)
+
+# Соединение исходного DataFrame с one hot encoding DataFrame
+data_one_hot = pd.concat([data, one_hot], axis=1)
+
+print("\nDataFrame with One Hot Encoding:")
+print(data_one_hot.head())

@@ -22,6 +22,7 @@ data_one_hot = pd.concat([data, one_hot], axis=1)
 print("\nDataFrame with One Hot Encoding:")
 print(data_one_hot.head())
 # Запустите этот скрипт после установки pandas, и он должен работать без ошибок.
+№ Вывод
 # Original DataFrame:
 #  whoAmI
 # 0  robot

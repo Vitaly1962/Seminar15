@@ -21,3 +21,30 @@ data_one_hot = pd.concat([data, one_hot], axis=1)
 
 print("\nDataFrame with One Hot Encoding:")
 print(data_one_hot.head())
+# Запустите этот скрипт после установки pandas, и он должен работать без ошибок.
+# Original DataFrame:
+#  whoAmI
+# 0  robot
+# 1  human
+# 2  human
+# 3  robot
+# 4  human
+
+# DataFrame with One Hot Encoding:
+#  whoAmI  robot  human
+# 0  robot      1      0
+# 1  human      0      1
+# 2  human      0      1
+# 3  robot      1      0
+# 4  human      0      1
+
+# Этот код создает DataFrame с перемешанными значениями 'robot' и 'human', затем преобразует его в формат 
+# one hot encoding, добавляя соответствующие столбцы для каждого уникального значения ('robot' и 'human').
+
+
+
+
+
+
+
+
